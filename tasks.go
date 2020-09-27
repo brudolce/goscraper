@@ -38,7 +38,8 @@ func task3(doc *goquery.Document, wg *sync.WaitGroup) {
 }
 
 //TASK 4 - Amount of internal and external links
-func task4(doc *goquery.Document, internal []string, external []string, wg *sync.WaitGroup) {
+func task4n5(doc *goquery.Document, wg *sync.WaitGroup) {
+	var internal, external = []string{}, []string{}
 	doc.Find("body a").Each(func(index int, element *goquery.Selection) {
 		link, _ := element.Attr("href")
 		if strings.Contains(link, "http") {
