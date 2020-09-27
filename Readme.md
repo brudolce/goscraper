@@ -1,6 +1,6 @@
 # Go Scraper
 
-![](https://img.shields.io/badge/go-v1.14-blue) ![](https://img.shields.io/badge/goquery-v1.5.1-blue) ![](https://img.shields.io/badge/Dockerfile-golang:alpine-green)
+![](https://img.shields.io/badge/go-v1.14-blue) ![](https://img.shields.io/badge/goquery-v1.5.1-blue) ![](https://img.shields.io/badge/image-golang:alpine-green)
 
 This is a simple scraper to check information from webpages.
 
