@@ -55,17 +55,27 @@ func task4n5(doc *goquery.Document, wg *sync.WaitGroup) {
 }
 
 //TASK 5 - Amount of inacessible links
-func task5(links []string, wg *sync.WaitGroup) {
-	var inacessible int = 0
-	fmt.Println("\n        ...checking links ... ")
-
+func urlCallCount(links []string) int {
+	count := 0
+	var wg sync.WaitGroup
 	for _, link := range links {
-		_, err := http.Get(link)
-		if err != nil {
-			inacessible++
-			fmt.Println("    Invalid link : ", link)
-		}
+		wg.Add(1)
+		go func(url string) {
+			defer wg.Done()
+			_, err := http.Get(url)
+			if err != nil {
+				count++
+				fmt.Println("    Invalid link : ", url)
+			}
+		}(link)
 	}
+	wg.Wait()
+	return count
+}
+
+func task5(links []string, wg *sync.WaitGroup) {
+	inacessible := urlCallCount(links)
+	fmt.Println("\n        ...checking links ... ")
 	fmt.Println(" Amount of inacessible links: ", inacessible)
 	wg.Done()
 }

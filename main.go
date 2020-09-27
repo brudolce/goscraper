@@ -39,7 +39,7 @@ func main() {
 
 	//TASK 4 - Amount of internal and external links
 	//TASK 5 - Amount of inacessible links
-	task4and5(doc, &waitGroup)
+	task4n5(doc, &waitGroup)
 
 	//TASK 6 - If a Page contains a login form
 	task6(doc, &waitGroup)
