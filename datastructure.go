@@ -1,6 +1,6 @@
 package main
 
-// golang has no "Set" datatype, for unique stuff. Probably cause it has no generics - implementing a "string" Set
+// golang has no "Set" datatype
 func uniqueStringArray(intSlice []string) []string {
 	keys := make(map[string]bool)
 	list := []string{}
