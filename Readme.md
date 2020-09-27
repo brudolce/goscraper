@@ -4,7 +4,7 @@
 
 This is a simple scraper to check information from webpages.
 
-[TOCM]
+---
 
 ### Features
 
@@ -42,5 +42,5 @@ go run .
 
 ### Extras
 
-install docker: https://docs.docker.com/get-docker/
+install docker: https://docs.docker.com/get-docker/ <br/>
 install golang: https://golang.org/doc/install/
