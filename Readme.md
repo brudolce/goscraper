@@ -30,7 +30,6 @@ If you have docker installed, clone this repository anywhere in your machine and
 
 ##### Golang
 
----
 
 If you do not have docker installed but have golang in your machine, clone this repo inside your \$GOPATH work directory, them run the application in the terminal on this project folder:
 
