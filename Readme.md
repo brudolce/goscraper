@@ -4,6 +4,8 @@
 
 This is a simple scraper to check information from webpages.
 
+[TOCM]
+
 ### Features
 
 - Checks HTML version
@@ -13,11 +15,13 @@ This is a simple scraper to check information from webpages.
 - Amount of inacessible links
 - If a page contains a login form
 
+---
+
 ### Get Started
 
 ##### Docker
 
-If you have docker installed, clone this repository anywhere in your machine, and on the root folder of this project type the following comands:
+If you have docker installed, clone this repository anywhere in your machine and in terminal, on this project folder, type the following comands:
 
 ```bash
  docker build -t goscraper .
@@ -26,8 +30,17 @@ If you have docker installed, clone this repository anywhere in your machine, an
 
 ##### Golang
 
-If you do not have docker but have golang in your machine, clone this repo inside your \$GOPATH work directory, them run the application:
+---
+
+If you do not have docker installed but have golang in your machine, clone this repo inside your \$GOPATH work directory, them run the application in the terminal on this project folder:
 
 ```bash
 go run .
 ```
+
+---
+
+### Extras
+
+install docker: https://docs.docker.com/get-docker/
+install golang: https://golang.org/doc/install/
