@@ -6,7 +6,6 @@ import (
 	"log"
 	"os"
 	"strings"
-	"sync"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -25,26 +24,21 @@ func main() {
 		log.Fatal(err)
 	}
 
-	var waitGroup sync.WaitGroup
-	waitGroup.Add(5)
-
 	//TASK 1 - HTML Version ??
-	task1(doc, &waitGroup)
+	task1(doc)
 
 	//TASK 2 - Find Page title
-	task2(doc, &waitGroup)
+	task2(doc)
 
 	//TASK 3 - Headings count by level
-	task3(doc, &waitGroup)
+	task3(doc)
 
 	//TASK 4 - Amount of internal and external links
 	//TASK 5 - Amount of inacessible links
-	task4n5(doc, &waitGroup)
+	task4n5(doc)
 
 	//TASK 6 - If a Page contains a login form
-	task6(doc, &waitGroup)
-
-	waitGroup.Wait()
+	task6(doc)
 
 	fmt.Println()
 
